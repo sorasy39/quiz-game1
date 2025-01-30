@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"> <!-- 文字コードをUTF-8（日本語対応）に設定 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- スマホでも適切に表示されるように設定 -->
+  <title>クイズゲーム</title> <!-- ブラウザのタブに表示されるページタイトル -->
+  <link rel="stylesheet" href="quiz2.css"> <!-- 外部CSSファイルを読み込む -->
+</head>
+<body>
+
+  <div class="quiz-container"> <!-- クイズ全体を囲むコンテナ -->
+    
+    <div id="start-screen"> <!-- スタート画面 -->
+      <h1>クイズゲームへようこそ！</h1>
+      <button id="start-btn">スタート</button> <!-- スタートボタン -->
+    </div>
+
+    <div id="quiz" class="hidden"> <!-- クイズの質問と選択肢を含む部分 -->
+      <h2 id="question">ここに質問が表示されます</h2> <!-- 質問を表示するエリア -->
+      <ul class="choices"> <!-- 選択肢のリスト -->
+        <li><button class="choice-btn">選択肢1</button></li> <!-- 選択肢のボタン -->
+        <li><button class="choice-btn">選択肢2</button></li>
+        <li><button class="choice-btn">選択肢3</button></li>
+        <li><button class="choice-btn">選択肢4</button></li>
+      </ul>
+      <button id="confirm-btn" class="hidden">答えを確認する</button> <!-- 追加 -->
+      <button id="next-btn" class="hidden">次へ</button> <!-- 次の問題に進むボタン -->
+    </div>
+    
+    <div id="result" class="hidden"> <!-- 結果発表画面（初期状態では非表示） -->
+      <h2>結果発表</h2>
+      <p id="score">スコア: 0</p> <!-- ユーザーのスコアを表示する部分 -->
+      <button id="restart-btn">もう一度</button> <!-- クイズを再スタートするボタン -->
+    </div>
+  </div>
+  
+  <audio id="correct-sound" src="maou_se_system47.mp3"></audio>
+  <audio id="wrong-sound" src="maou_se_system45.mp3"></audio>
+  <audio id="high-score-sound" src="Convert_Screen_Recording_20250129_225058_Chrome.mp3"></audio>
+  <audio id="low-score-sound" src="maou_se_magical28.mp3"></audio>
+
+  <script src="quiz2.js"></script> <!-- JavaScriptファイルを読み込む -->
+</body>
+</html>

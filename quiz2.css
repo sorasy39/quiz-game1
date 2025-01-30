@@ -1,0 +1,126 @@
+body {
+    font-family: 'Roboto', sans-serif; /* フォントをRobotoに設定 */
+    background: linear-gradient(135deg, #1e293b, #0f172a); /* 背景をグラデーションに */
+    color: #f1f5f9; /* 文字色を薄いグレーに */
+    margin: 0;
+    display: flex; /* フレックスボックスを適用 */
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+    height: 100vh; /* 画面の高さいっぱいに広げる */
+}
+
+#start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* 画面全体の高さに合わせる */
+    background-color: #1e293b; /* 背景色を統一 */
+    color: #f1f5f9; /* 文字色を薄いグレーに */
+}
+
+
+#start-btn {
+    background-color: #4CAF50; /* 背景色（緑色） */
+    color: white; /* テキスト色 */
+    border: none; /* ボーダーなし */
+    padding: 10px 20px; /* 内側の余白 */
+    text-align: center; /* テキストの中央揃え */
+    text-decoration: none; /* テキストの下線なし */
+    display: inline-block; /* インラインブロック表示 */
+    font-size: 16px; /* フォントサイズ */
+    margin: 4px 2px; /* 外側の余白 */
+    cursor: pointer; /* カーソルをポインタに */
+    border-radius: 12px; /* 角を丸く */
+}
+
+#start-btn:hover {
+    background-color: #0056b3; /* ホバー時の背景色 */
+}
+
+.quiz-container {
+    background: #334155; /* 背景色 */
+    border-radius: 12px; /* 角を丸く */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 影をつける */
+    padding: 50px; /* 内側の余白 */
+    max-width: 800px; /* 最大幅 */
+    width: 100%; /* 横幅を100%に */
+    text-align: center; /* テキストを中央揃え */
+}
+
+.hidden {
+    display: none; /* 隠す要素（クラスを付与すると非表示になる） */
+}
+
+.choices {
+    list-style: none; /* リストのマーカーを消す */
+    padding: 0; /* 内側の余白をなくす */
+    display: flex; /* フレックスボックスを適用 */
+    justify-content: space-between; /* 均等配置 */
+    flex-wrap: wrap; /* 折り返し可能に */
+    gap: 10px; /* 選択肢の間隔を開ける */
+}
+
+.choice-btn {
+    flex: 1 1 calc(50% - 10px); /* 2列レイアウトに調整（50%の幅から余白を差し引く） */
+    background: #475569; /* 背景色 */
+    border: none; /* 枠線なし */
+    border-radius: 8px; /* 角を丸く */
+    color: #f1f5f9; /* 文字色 */
+    cursor: pointer; /* カーソルをポインターに */
+    padding: 10px 20px; /* 内側の余白 */
+    transition: background 0.3s ease; /* 背景色の変更を滑らかに */
+}
+
+.choice-btn.selected {
+    background-color: #d0e6f6; /* 選択されたボタンの背景色 */
+    border: 2px solid #007acc; /* 枠線の色 */
+}
+
+.choice-btn:hover {
+    background: #64748b; /* ホバー時の背景色 */
+}
+
+#confirm-btn {
+    background-color: #0056b3; /* 背景色（緑色） */
+    color: white; /* テキスト色 */
+    border: none; /* ボーダーなし */
+    padding: 10px 20px; /* 内側の余白 */
+    text-align: center; /* テキストの中央揃え */
+    text-decoration: none; /* テキストの下線なし */
+    display: inline-block; /* インラインブロック表示 */
+    font-size: 16px; /* フォントサイズ */
+    margin: 4px 2px; /* 外側の余白 */
+    cursor: pointer; /* カーソルをポインタに */
+    border-radius: 12px; /* 角を丸く */
+}
+
+#confirm-btn:hover {
+    background-color: #45a049; /* ホバー時の背景色（濃い緑色） */
+}
+
+#next-btn, #restart-btn {
+    background: #2563eb; /* ボタンの背景色 */
+    border: none; /* 枠線なし */
+    border-radius: 8px; /* 角を丸く */
+    color: #fff; /* 文字色 */
+    padding: 10px 20px; /* 内側の余白 */
+    cursor: pointer; /* カーソルをポインターに */
+    transition: background 0.3s ease; /* 背景色の変更を滑らかに */
+}
+
+#next-btn:hover, #restart-btn:hover {
+    background: #1d4ed8; /* ホバー時の背景色 */
+}
+
+/* 正解のときのスタイル（緑色） */
+.correct {
+    background-color: #22c55e !important; /* 明るい緑色 */
+    color: white;
+}
+
+/* 不正解のときのスタイル（赤色） */
+.wrong {
+    background-color: #ef4444 !important; /* 明るい赤色 */
+    color: white;
+}
